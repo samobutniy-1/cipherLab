@@ -8,13 +8,11 @@ interface Column {
   chars: string[];
 }
 
-export function Rain() {
-  const CHARS = ["ア", "∑", "Ψ", "0", "1", "!", "@", "#", "≠"];
+type RainProps = {
+  randChar: () => string;
+};
 
-  function randChar() {
-    return CHARS[Math.floor(Math.random() * CHARS.length)];
-  }
-
+export function Rain({ randChar }: RainProps) {
   const createColumns = (): Column[] => {
     const count = Math.floor(window.innerWidth / 19);
     return Array.from({ length: count }, (_, i) => ({
