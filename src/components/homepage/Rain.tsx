@@ -8,9 +8,9 @@ interface Column {
   chars: string[];
 }
 
-type RainProps = {
+interface RainProps {
   randChar: () => string;
-};
+}
 
 export function Rain({ randChar }: RainProps) {
   const createColumns = (): Column[] => {
@@ -44,7 +44,7 @@ export function Rain({ randChar }: RainProps) {
 
   return (
     <>
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden select-none">
         {columns.map((col) => (
           <div
             key={col.id}
