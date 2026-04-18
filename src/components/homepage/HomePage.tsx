@@ -14,10 +14,7 @@ export function HomePage() {
       <Rain randChar={randChar} />
       <div className="flex flex-col justify-center items-center gap-10">
         <ScrambleText text="cipherLab" randChar={randChar} />
-        <Link
-          className="text-white relative z-50 text-2xl bg-transparent border border-gray-600 rounded-xl p-3"
-          to="/ciphers"
-        >
+        <Link className="btn-matrix" to="/ciphers">
           explore ciphers
         </Link>
       </div>

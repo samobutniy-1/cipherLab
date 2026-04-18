@@ -7,30 +7,55 @@ body,
 }
 
 @theme {
+  --shadow-emerald-sm: 0 0 8px #22c55e;
+  --shadow-emerald-md: 0 0 16px #22c55e;
+  --shadow-emerald-lg: 0 0 24px #22c55e;
+
   --animate-fall: fall linear infinite;
-  @keyframes fall {
-    0% {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.5;
-    }
-    20% {
-      opacity: 1;
-    }
-    40% {
-      opacity: 0.5;
-    }
-    60% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 0.3;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@layer components {
+  .btn-matrix {
+    @apply px-8 py-4 text-lg rounded-xl
+    border border-emerald-500/30
+    text-emerald-500
+    bg-black/20 backdrop-blur-md
+    flex items-center justify-center gap-2 leading-none
+    transition-all duration-300;
+
+    text-shadow: var(--shadow-emerald-sm), var(--shadow-emerald-md);
+  }
+
+  .btn-matrix:hover {
+    @apply text-white border-emerald-400;
+
+    box-shadow: var(--shadow-emerald-sm), var(--shadow-emerald-lg);
+    text-shadow: var(--shadow-emerald-md), var(--shadow-emerald-lg);
   }
 }
