@@ -1,5 +1,6 @@
-import { HomePage } from "./components/homepage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router";
+import { HomePage } from "./components/homepage/HomePage";
+import { Ciphers } from "./components/ciphers/Ciphers";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/ciphers" element={<Ciphers />}></Route>
       </Routes>
     </BrowserRouter>
   );
