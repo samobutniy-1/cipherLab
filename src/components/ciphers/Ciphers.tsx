@@ -1,14 +1,5 @@
 import { Link } from "react-router";
 
-interface Cipher {
-  id: number;
-  name: string;
-  type: string;
-  level: "easy" | "medium" | "hard";
-  prewiewText: string;
-  encrypt: (text: string) => string;
-}
-
 export function Ciphers() {
   const ciphers: Cipher[] = [];
   return (

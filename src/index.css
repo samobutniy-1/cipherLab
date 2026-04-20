@@ -12,6 +12,7 @@ body,
   --shadow-emerald-lg: 0 0 24px #22c55e;
 
   --animate-fall: fall linear infinite;
+  --animate-blink: blink 1s step-start infinite;
 }
 
 @keyframes fall {
@@ -36,6 +37,16 @@ body,
   }
   100% {
     transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
   }
 }
