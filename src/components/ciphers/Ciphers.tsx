@@ -18,8 +18,8 @@ export function Ciphers() {
       </Link>
 
       <div>
-        <h2>//ciphers</h2>
-        <span>`${ciphers.length} ciphers`</span>
+        <h2 className="text-white">//ciphers</h2>
+        <span className="text-white">{ciphers.length} ciphers</span>
       </div>
     </div>
   );
