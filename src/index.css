@@ -11,6 +11,10 @@ body,
   --shadow-emerald-md: 0 0 16px #22c55e;
   --shadow-emerald-lg: 0 0 24px #22c55e;
 
+  --shadow-yellow-sm: 0 0 8px #eab308;
+
+  --shadow-red-sm: 0 0 8px #ef4444;
+
   --animate-fall: fall linear infinite;
   --animate-blink: blink 1s step-start infinite;
 }
